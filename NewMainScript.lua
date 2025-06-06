@@ -1,30 +1,3 @@
---[[         _____                    _____                    _____                   _____          
-        /\    \                  /\    \                  /\    \                 /\    \         
-       /::\____\                /::\    \                /::\    \               /::\    \        
-      /:::/    /               /::::\    \              /::::\    \             /::::\    \       
-     /:::/    /               /::::::\    \            /::::::\    \           /::::::\    \      
-    /:::/    /               /:::/\:::\    \          /:::/\:::\    \         /:::/\:::\    \     
-   /:::/____/               /:::/__\:::\    \        /:::/__\:::\    \       /:::/__\:::\    \    
-   |::|    |               /::::\   \:::\    \      /::::\   \:::\    \     /::::\   \:::\    \   
-   |::|    |     _____    /::::::\   \:::\    \    /::::::\   \:::\    \   /::::::\   \:::\    \  
-   |::|    |    /\    \  /:::/\:::\   \:::\    \  /:::/\:::\   \:::\____\ /:::/\:::\   \:::\    \ 
-   |::|    |   /::\____\/:::/  \:::\   \:::\____\/:::/  \:::\   \:::|    /:::/__\:::\   \:::\____\
-   |::|    |  /:::/    /\::/    \:::\  /:::/    /\::/    \:::\  /:::|____\:::\   \:::\   \::/    /
-   |::|    | /:::/    /  \/____/ \:::\/:::/    /  \/_____/\:::\/:::/    / \:::\   \:::\   \/____/ 
-   |::|____|/:::/    /            \::::::/    /            \::::::/    /   \:::\   \:::\    \     
-   |:::::::::::/    /              \::::/    /              \::::/    /     \:::\   \:::\____\    
-   \::::::::::/____/               /:::/    /                \::/____/       \:::\   \::/    /    
-    ~~~~~~~~~~                    /:::/    /                  ~~              \:::\   \/____/     
-                                 /:::/    /                                    \:::\    \         
-                                /:::/    /                                      \:::\____\        
-                                \::/    /                                        \::/    /        
-                                 \/____/                                          \/____/         
-
-    The #1 Roblox Bedwars Script on the market.
-
-        - Xylex/7GrandDad - developer / organizer
-]]--
-
 local isfile: (string) -> boolean = isfile or function(file: string): booleanAdd commentMore actions
     local suc: boolean, res: string? = pcall(function(): string? return readfile(file) end);
     return suc and res ~= nil;
@@ -34,7 +7,7 @@ local delfile: (string) -> () = delfile or function(file: string): () writefile(
 local function downloadFile(path: string, func: ((string) -> any)?): string
 	if not isfile(path) then
 		local suc: boolean, res: string? = pcall(function(): string
-			return game:HttpGet('https://raw.githubusercontent.com/Copiums/Velocity/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true);
+			return game:HttpGet('https://raw.githubusercontent.com/Trariviste/Velocity/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true);
 		end);
 		if not suc or res == '404: Not Found' then
 			error(res);
@@ -69,7 +42,7 @@ end;
 
 if not shared.VapeDeveloper then
 	local _, subbed: string = pcall(function(): string
-		return game:HttpGet('https://github.com/Copiums/Velocity');
+		return game:HttpGet('https://github.com/Trariviste/Velocity');
 	end);
 	local commit: string? = subbed:find('currentOid');
 	commit = commit and subbed:sub(commit + 13, commit + 52) or nil;
