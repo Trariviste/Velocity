@@ -15,7 +15,7 @@
 1. Copy and paste this script
 2. Execute the provided loadstring below.
 ```
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Copiums/Velocity/main/NewMainScript.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Trariviste/Velocity/main/NewMainScript.lua", true))()
 ```
 
 ## Developers & Credits
